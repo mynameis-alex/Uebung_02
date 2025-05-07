@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class SphereControllerD : MonoBehaviour
 {
-
-    [Range(-180, 180)]
-    [Tooltip("Meter per second")]
-    public float rotationSpeed = 90;
-
     public GameObject bird;
+    private SparrowControllerC controller;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
+
+        controller = bird.GetComponent<SparrowControllerC>();
         
         //rotate bird depending on direction
-        if (rotationSpeed < 0) {
+        if (controller.rotationSpeed < 0) {
             bird.transform.Rotate(0, 180, 0);
         }
 
@@ -23,7 +21,7 @@ public class SphereControllerD : MonoBehaviour
     void Update() {
 
         //rotate around the vertical axis by 90 degrees and within one second
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * controller.rotationSpeed * Time.deltaTime);
         
     }
 }
