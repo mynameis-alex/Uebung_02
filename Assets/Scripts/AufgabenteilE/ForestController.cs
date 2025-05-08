@@ -25,8 +25,8 @@ public class ForestController : MonoBehaviour
       //let all trees grow with different speeds and with different size-limits
       for (int i = 0; i < Trees.Length; i++) {
         //random speed and size
-        float speed = new System.Random().Next(1, 10) / 500.0f; //second parameter is exclusive
-        float size = new System.Random().Next(5, 11);
+        float speed = new System.Random().Next(5, 10) / 500.0f; //second parameter is exclusive
+        float size = new System.Random().Next(5, 16);
         Trees[i].GetComponent<TreeControllerE>().startGrowing(speed, size);
       }
 
