@@ -41,7 +41,6 @@ public class ForestController : MonoBehaviour
       //only if there is no target tree or if target tree changed
       if (targetTree == null || targetTree != newTargetTree) {
         targetTree = newTargetTree;
-        Debug.Log("Neues Ziel: " + targetTree.name);
         sparrowController.setTargetTree(targetTree);
       }
 
@@ -53,15 +52,28 @@ public class ForestController : MonoBehaviour
       int highestTreeIndex = 0;
 
       for (int i = 1; i < Trees.Length; i++) {
+
+        if (Trees[i].activeSelf == true) {
+          Debug.Log("Baum " + (i + 1) + ": " + Trees[i].transform.localScale.y);
+        }
+
         if (
-          Trees[i].activeSelf == true &&
-          Trees[i].transform.localScale.y > Trees[highestTreeIndex].transform.localScale.y
+          //either tree must be active and higher
+          (
+            Trees[i].activeSelf == true &&
+            Trees[i].transform.localScale.y > Trees[highestTreeIndex].transform.localScale.y
+          ) ||
+          //or current highest tree is not active anymore
+          Trees[highestTreeIndex].activeSelf == false
           ) {
           highestTreeIndex = i;
+          
         }
       }
       
-      return Trees[highestTreeIndex];
+      //if first is selected and it is not active anymore -> no tree active anymore and therefore return zero
+      //otherwise either the index is different or tree is active and therefore return the tree object
+      return  (highestTreeIndex == 0 && Trees[0].activeSelf == false) ? null : Trees[highestTreeIndex];
 
     }
 
