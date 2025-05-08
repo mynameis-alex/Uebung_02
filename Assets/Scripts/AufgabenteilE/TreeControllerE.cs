@@ -4,9 +4,8 @@ using UnityEngine;
 public class TreeControllerE : MonoBehaviour
 {
 
-    private int treeName;
-    private float frequence;
-    private float maxScale;
+    private float frequence = 1;
+    private float maxScale = 10;
     private Vector3 origScale;
 
     private Boolean isGrowing = false;
@@ -15,8 +14,7 @@ public class TreeControllerE : MonoBehaviour
         origScale = transform.localScale;
     }
 
-    public void startGrowing(int name, float speed, float maxSize) {
-        treeName = name;
+    public void startGrowing(float speed, float maxSize) {
         frequence = speed;
         maxScale = maxSize;
         isGrowing = true;
@@ -24,16 +22,16 @@ public class TreeControllerE : MonoBehaviour
 
     void Update() {
 
-        if (!isGrowing) {
-            return;
-        }
+       if (!isGrowing) {
+           return;
+       }
 
         float sinusValue = Mathf.Sin(2 * Mathf.PI * frequence * Time.time);
         float factor = Mathf.Lerp(1f, maxScale, (sinusValue + 1f) * 0.5f);
         transform.localScale = origScale * factor;
 
         //check if max scale is reached (including a threshold of 0.05) and deactivate tree then
-        if (transform.localScale.x >= (maxScale * origScale.x * 0.95)) {
+         if (transform.localScale.x >= (maxScale * origScale.x * 0.95)) {
             gameObject.SetActive(false);
             isGrowing = false;
         }

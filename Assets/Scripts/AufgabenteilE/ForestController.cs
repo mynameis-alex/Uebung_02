@@ -25,9 +25,9 @@ public class ForestController : MonoBehaviour
       //let all trees grow with different speeds and with different size-limits
       for (int i = 0; i < Trees.Length; i++) {
         //random speed and size
-        float speed = new System.Random().Next(1, 10) / 1000.0f; //second parameter is exclusive
+        float speed = new System.Random().Next(1, 10) / 500.0f; //second parameter is exclusive
         float size = new System.Random().Next(5, 11);
-        Trees[i].GetComponent<TreeControllerE>().startGrowing(i, speed, size);
+        Trees[i].GetComponent<TreeControllerE>().startGrowing(speed, size);
       }
 
 
@@ -50,11 +50,12 @@ public class ForestController : MonoBehaviour
       
       //go through all trees and check which is the highest
       int highestTreeIndex = 0;
+      Boolean anyActive = false;
 
-      for (int i = 1; i < Trees.Length; i++) {
+      for (int i = 0; i < Trees.Length; i++) {
 
-        if (Trees[i].activeSelf == true) {
-          Debug.Log("Baum " + (i + 1) + ": " + Trees[i].transform.localScale.y);
+        if (Trees[i].activeSelf) {
+          anyActive = true;
         }
 
         if (
@@ -73,7 +74,7 @@ public class ForestController : MonoBehaviour
       
       //if first is selected and it is not active anymore -> no tree active anymore and therefore return zero
       //otherwise either the index is different or tree is active and therefore return the tree object
-      return  (highestTreeIndex == 0 && Trees[0].activeSelf == false) ? null : Trees[highestTreeIndex];
+      return anyActive ? Trees[highestTreeIndex] : null;
 
     }
 
