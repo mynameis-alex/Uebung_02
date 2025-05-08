@@ -8,12 +8,12 @@ public class ForestController : MonoBehaviour
 
     private GameObject targetTree;
 
-    public GameObject sphere;
-    private SphereControllerE sphereController;
+    public GameObject sparrow;
+    private SparrowControllerE sparrowController;
 
     void Start() {
       
-      sphereController = sphere.GetComponent<SphereControllerE>();
+      sparrowController = sparrow.GetComponent<SparrowControllerE>();
 
       Trees = new GameObject[transform.childCount];
         
@@ -42,7 +42,7 @@ public class ForestController : MonoBehaviour
       if (targetTree == null || targetTree != newTargetTree) {
         targetTree = newTargetTree;
         Debug.Log("Neues Ziel: " + targetTree.name);
-        sphereController.setTargetTree(targetTree);
+        sparrowController.setTargetTree(targetTree);
       }
 
     }
@@ -75,10 +75,6 @@ public class ForestController : MonoBehaviour
       + adjust grow-rate cause might be too slow
 
       - detect correct tree (ignore deactivated trees!)
-
-      - rotate bird and sphere so that bird always follows sphere
-      -> if bird is closer to tree than sphere, it seems as if sphere is following bird
-        -> therefore, it looks as if the bird is flying backwards
 
     */
 
