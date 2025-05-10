@@ -3,12 +3,12 @@ using UnityEngine;
 public class SphereControllerD : MonoBehaviour
 {
     public GameObject bird;
-    private SparrowControllerC controller;
+    private SparrowControllerD controller;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
 
-        controller = bird.GetComponent<SparrowControllerC>();
+        controller = bird.GetComponent<SparrowControllerD>();
         
         //rotate bird depending on direction
         if (controller.rotationSpeed < 0) {
