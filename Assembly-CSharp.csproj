@@ -57,9 +57,11 @@
     <Compile Include="Assets\Scripts\AufgabenteilB\SparrowControllerB.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilG\CameraController.cs" />
+    <Compile Include="Assets\Scripts\AufgabenteilH\RayCastController.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilF\ForestController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilA\SparrowController.cs" />
+    <Compile Include="Assets\Scripts\AufgabenteilH\SparrowControllerH.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilC\SphereController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\LaunchProjectile.cs" />

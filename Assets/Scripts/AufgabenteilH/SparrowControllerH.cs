@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class SparrowControllerF : MonoBehaviour {
+public class SparrowControllerH : MonoBehaviour {
 
     [Range(-180, 180)]
     [Tooltip("Meter per second")]

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class TreeControllerE : MonoBehaviour
+public class TreeControllerF : MonoBehaviour
 {
 
     private float frequence = 1;

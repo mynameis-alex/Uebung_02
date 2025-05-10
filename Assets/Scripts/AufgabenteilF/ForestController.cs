@@ -9,11 +9,11 @@ public class ForestController : MonoBehaviour
     private GameObject targetTree;
 
     public GameObject sparrow;
-    private SparrowControllerE sparrowController;
+    private SparrowControllerF sparrowController;
 
     void Start() {
       
-      sparrowController = sparrow.GetComponent<SparrowControllerE>();
+      sparrowController = sparrow.GetComponent<SparrowControllerF>();
 
       Trees = new GameObject[transform.childCount];
         
@@ -27,7 +27,7 @@ public class ForestController : MonoBehaviour
         //random speed and size
         float speed = new System.Random().Next(5, 10) / 500.0f; //second parameter is exclusive
         float size = new System.Random().Next(5, 16);
-        Trees[i].GetComponent<TreeControllerE>().startGrowing(speed, size);
+        Trees[i].GetComponent<TreeControllerF>().startGrowing(speed, size);
       }
 
 
