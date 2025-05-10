@@ -56,9 +56,10 @@
     <Compile Include="Assets\VRTemplateAssets\Scripts\BooleanToggleVisualsController.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilB\SparrowControllerB.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
+    <Compile Include="Assets\Scripts\AufgabenteilG\CameraController.cs" />
+    <Compile Include="Assets\Scripts\AufgabenteilF\ForestController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilA\SparrowController.cs" />
-    <Compile Include="Assets\Scripts\AufgabenteilE\TreeControllerE.cs" />
     <Compile Include="Assets\Scripts\AufgabenteilC\SphereController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
@@ -69,10 +70,10 @@
     <Compile Include="Assets\Scripts\AufgabenteilD\SphereControllerD.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\Callout.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
+    <Compile Include="Assets\Scripts\AufgabenteilF\TreeControllerF.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\StepManager.cs" />
-    <Compile Include="Assets\Scripts\AufgabenteilE\ForestController.cs" />
+    <Compile Include="Assets\Scripts\AufgabenteilF\SparrowControllerF.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\AnchorVisuals.cs" />
-    <Compile Include="Assets\Scripts\AufgabenteilE\SparrowControllerE.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
