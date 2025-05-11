@@ -38,10 +38,8 @@ public class SparrowControllerH : MonoBehaviour {
                 moveToTarget();
             }
 
-        } else {
-            Debug.Log("Kein Ziel.");
         }
-
+        
     }
 
     //called when sphere isn't at same spot as wanted tree and therefore starts moving there
